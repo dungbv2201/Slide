@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Dungbv_Slide::slide"
+             title="Slide Manger"
+             module="Dungbv_Slide"
+             translate="title"
+             sortOrder="15"
+             resource="Dungbv_Slide::slide"
+        />
+        <add id="Dungbv_Slide::slide_index"
+             title="List All Slide"
+             module="Dungbv_Slide"
+             sortOrder="1"
+             action="slide/index"
+             resource="Dungbv_Slide::slide_manager"
+             parent="Dungbv_Slide::slide"
+        />
+        <add id="Dungbv_Slide::slide_create"
+             title="Add New Slide"
+             module="Dungbv_Slide"
+             sortOrder="1"
+             action="slide/index/add"
+             resource="Dungbv_Slide::slide_create"
+             parent="Dungbv_Slide::slide"
+        />
+        <!--slide group-->
+        <!--<add id="Dungbv_Slide::slide_group"-->
+             <!--title="Slide Manger"-->
+             <!--module="Dungbv_Slide"-->
+             <!--translate="title"-->
+             <!--sortOrder="15"-->
+             <!--resource="Dungbv_Slide::slide_group"-->
+        <!--/>-->
+        <add id="Dungbv_Slide::slide_group_index"
+             title="List All Slide Group"
+             module="Dungbv_Slide"
+             sortOrder="1"
+             action="slide/index"
+             resource="Dungbv_Slide::list_slide_group"
+             parent="Dungbv_Slide::slide"
+        />
+        <add id="Dungbv_Slide::slide_group_create"
+             title="Add New Slide Group"
+             module="Dungbv_Slide"
+             sortOrder="1"
+             action="slide/index/add"
+             resource="Dungbv_Slide::slide_save"
+             parent="Dungbv_Slide::slide"
+        />
+    </menu>
+</config>
