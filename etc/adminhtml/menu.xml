@@ -9,45 +9,53 @@
              sortOrder="15"
              resource="Dungbv_Slide::slide"
         />
+        <!--slide-->
         <add id="Dungbv_Slide::slide_index"
+             title="Slide"
+             module="Dungbv_Slide"
+             sortOrder="20"
+             resource="Dungbv_Slide::slide"
+             parent="Dungbv_Slide::slide"
+        />
+        <add id="Dungbv_Slide::slide_list"
              title="List All Slide"
              module="Dungbv_Slide"
-             sortOrder="1"
-             action="slide/index"
-             resource="Dungbv_Slide::slide_manager"
-             parent="Dungbv_Slide::slide"
+             sortOrder="30"
+             action="slide/slide/index"
+             resource="Dungbv_Slide::slide_index"
+             parent="Dungbv_Slide::slide_index"
         />
         <add id="Dungbv_Slide::slide_create"
              title="Add New Slide"
              module="Dungbv_Slide"
-             sortOrder="1"
+             sortOrder="30"
              action="slide/index/add"
              resource="Dungbv_Slide::slide_create"
+             parent="Dungbv_Slide::slide_index"
+        />
+        <!--group-->
+        <add id="Dungbv_Slide::slide_group_index"
+             title="Slide Group"
+             module="Dungbv_Slide"
+             sortOrder="20"
+             resource="Dungbv_Slide::slide_manager"
              parent="Dungbv_Slide::slide"
         />
-        <!--slide group-->
-        <!--<add id="Dungbv_Slide::slide_group"-->
-             <!--title="Slide Manger"-->
-             <!--module="Dungbv_Slide"-->
-             <!--translate="title"-->
-             <!--sortOrder="15"-->
-             <!--resource="Dungbv_Slide::slide_group"-->
-        <!--/>-->
-        <add id="Dungbv_Slide::slide_group_index"
+        <add id="Dungbv_Slide::slide_group_list"
              title="List All Slide Group"
              module="Dungbv_Slide"
-             sortOrder="1"
+             sortOrder="40"
              action="slide/index"
              resource="Dungbv_Slide::list_slide_group"
-             parent="Dungbv_Slide::slide"
+             parent="Dungbv_Slide::slide_group_index"
         />
         <add id="Dungbv_Slide::slide_group_create"
              title="Add New Slide Group"
              module="Dungbv_Slide"
-             sortOrder="1"
+             sortOrder="50"
              action="slide/index/add"
              resource="Dungbv_Slide::slide_save"
-             parent="Dungbv_Slide::slide"
+             parent="Dungbv_Slide::slide_group_index"
         />
     </menu>
 </config>

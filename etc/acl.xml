@@ -5,7 +5,7 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="Dungbv_Slide::slide" title="Slide" sortOrder="1">
+                <resource id="Dungbv_Slide::slide" title="Slide Manager2" sortOrder="1">
                     <resource id="Dungbv_Slide::slide_index" title="List Slide">
                         <resource id="Dungbv_Slide::slide_save" title="Save Slide" sortOrder="10"/>
                         <resource id="Dungbv_Slide::slide_show" title="Show Slide" sortOrder="20"/>
