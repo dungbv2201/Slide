@@ -41,9 +41,8 @@ class Index extends Action
     public function execute()
     {
         $resultPage = $this->pageFactory->create();
-        $resultPage->setActiveMenu('Dungbv_Slide::slide_list');
-        $resultPage->
-        //$this->_setActiveMenu('Dungbv_Slide::slide_list');
+        $this->_setActiveMenu('Dungbv_Slide::slide_list');
+        $resultPage->getConfig()->getTitle()->prepend(__('List all banner'));
         return $resultPage;
     }
 }
